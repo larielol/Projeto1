@@ -1,0 +1,21 @@
+.recommendations-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .recommendations-actions {
+    justify-content: stretch;
+  }
+
+  .recommendations-actions button {
+    width: 100%;
+  }
+}

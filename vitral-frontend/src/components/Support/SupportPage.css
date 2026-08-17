@@ -1,0 +1,138 @@
+.support-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 44px;
+}
+
+.support-shortcuts article {
+  min-height: 175px;
+  padding: 24px 27px;
+  border-radius: 23px;
+  background: #b6b18d;
+}
+
+.support-shortcuts span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.support-shortcuts h2 {
+  margin: 28px 0 7px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.support-shortcuts p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.support-main {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 35px;
+}
+
+.support-faq,
+.support-form {
+  padding: 31px;
+  border-radius: 25px;
+  background: #dedede;
+}
+
+.support-faq > h2,
+.support-form > h2 {
+  margin: 0 0 25px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.support-faq details {
+  border-top: 1px solid #bdbdb6;
+}
+
+.support-faq details:last-child {
+  border-bottom: 1px solid #bdbdb6;
+}
+
+.support-faq summary {
+  padding: 17px 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.support-faq details p {
+  margin: -3px 4px 18px;
+  color: #5f5e58;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.support-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-form label {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.support-form input,
+.support-form textarea {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border: 1px solid #c5c5c0;
+  border-radius: 13px;
+  background: #f0f0ee;
+  outline: 0;
+  resize: vertical;
+}
+
+.support-form button {
+  align-self: start;
+  margin-top: auto;
+  padding: 10px 22px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: #dbe84d;
+  cursor: pointer;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.support-form button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.support-feedback {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.support-feedback--erro {
+  background: #fde8e8;
+  color: #b00020;
+  border: 1px solid #f5c2c2;
+}
+
+.support-feedback--sucesso {
+  background: #e6f4ea;
+  color: #1e6e35;
+  border: 1px solid #a8d5b5;
+}
+
+@media (max-width: 800px) {
+  .support-shortcuts,
+  .support-main {
+    grid-template-columns: 1fr;
+  }
+}

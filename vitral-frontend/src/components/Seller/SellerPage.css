@@ -1,0 +1,157 @@
+.seller-profile {
+  display: grid;
+  grid-template-columns: 155px minmax(300px, 1fr) auto;
+  align-items: center;
+  gap: 34px;
+  padding: 34px;
+  border-radius: 27px;
+  background: var(--store-accent);
+}
+
+.seller-avatar {
+  display: grid;
+  place-items: center;
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: var(--store-card);
+  font-size: 43px;
+}
+
+.seller-copy > span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.seller-copy h2 {
+  margin: 8px 0;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.seller-copy > p {
+  max-width: 650px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.seller-copy dl {
+  display: flex;
+  gap: 38px;
+  margin: 22px 0 0;
+}
+
+.seller-copy dl div {
+  display: grid;
+  gap: 3px;
+}
+
+.seller-copy dt {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.seller-copy dd {
+  margin: 0;
+  font-size: 16px;
+}
+
+.seller-actions {
+  display: grid;
+  gap: 11px;
+  min-width: 170px;
+}
+
+.seller-actions a,
+.seller-actions button {
+  min-height: 43px;
+  padding: 10px 19px;
+  border: 1px solid #858374;
+  border-radius: 999px;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.seller-actions a {
+  border-color: #dbe84d;
+  background: #dbe84d;
+  font-weight: 700;
+}
+
+.seller-actions button {
+  background: transparent;
+  cursor: pointer;
+}
+
+.seller-catalog {
+  margin-top: 55px;
+}
+
+.seller-catalog > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.seller-catalog h2,
+.seller-catalog p {
+  margin: 0;
+}
+
+.seller-catalog h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.seller-catalog p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.seller-catalog select {
+  padding: 9px 16px;
+  border: 1px solid #9d9b90;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.seller-product-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .seller-profile {
+    grid-template-columns: auto 1fr;
+  }
+
+  .seller-actions {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .seller-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-avatar {
+    width: 110px;
+    height: 110px;
+  }
+
+  .seller-copy dl {
+    display: grid;
+    gap: 13px;
+  }
+
+  .seller-actions {
+    grid-template-columns: 1fr;
+  }
+}

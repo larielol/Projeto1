@@ -1,0 +1,89 @@
+.delete-account {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.delete-warning,
+.delete-confirmation {
+  padding: 34px;
+  border-radius: 25px;
+  background: var(--store-card);
+}
+
+.delete-warning svg {
+  color: #7d3930;
+}
+
+.delete-warning h2,
+.delete-confirmation h2 {
+  margin: 18px 0 10px;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.delete-warning p,
+.delete-confirmation p {
+  line-height: 1.5;
+}
+
+.delete-warning ul {
+  display: grid;
+  gap: 11px;
+  padding-left: 20px;
+  line-height: 1.45;
+}
+
+.delete-confirmation {
+  align-self: start;
+}
+
+.delete-confirmation h2 {
+  margin-top: 0;
+}
+
+.delete-confirmation label {
+  display: grid;
+  gap: 7px;
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.delete-confirmation input {
+  padding: 12px 14px;
+  border: 1px solid #bebeb7;
+  border-radius: 12px;
+  background: #f0f0ee;
+}
+
+.delete-confirmation button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: 0;
+  border-radius: 999px;
+  background: #914a40;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.delete-confirmation button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.delete-confirmation a {
+  display: block;
+  margin-top: 16px;
+  color: inherit;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .delete-account {
+    grid-template-columns: 1fr;
+  }
+}

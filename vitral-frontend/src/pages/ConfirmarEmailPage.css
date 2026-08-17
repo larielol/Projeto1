@@ -1,0 +1,53 @@
+.confirmar-email-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-beige);
+  padding: 24px;
+}
+
+.confirmar-email-card {
+  background: var(--color-beige-dark);
+  border-radius: var(--radius-md);
+  padding: 48px 40px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.confirmar-email-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.confirmar-email-card h2 {
+  font-size: 26px;
+}
+
+.confirmar-email-hint {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.confirmar-email-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 28px;
+  background: var(--color-yellow);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.15s;
+}
+
+.confirmar-email-btn:hover {
+  background: var(--color-yellow-hover);
+}

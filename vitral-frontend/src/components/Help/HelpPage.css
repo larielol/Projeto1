@@ -1,0 +1,102 @@
+.help-page {
+  min-height: 100svh;
+  padding: 50px 8.3vw 65px;
+  background: #cecec2;
+  color: #171715;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.help-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.help-back,
+.help-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: inherit;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.help-back {
+  justify-self: start;
+}
+
+.help-login {
+  justify-self: end;
+}
+
+.help-content {
+  display: grid;
+  gap: 86px;
+  margin-top: 24px;
+}
+
+.help-item {
+  display: grid;
+  grid-template-columns: 43px 1fr;
+  align-items: center;
+  gap: 27px;
+}
+
+.help-icon {
+  display: grid;
+  place-items: center;
+  color: #343942;
+}
+
+.help-item:first-child .help-icon {
+  color: #2c2d2b;
+}
+
+.help-item p {
+  display: flex;
+  align-items: center;
+  min-height: 65px;
+  margin: 0;
+  padding: 8px 49px;
+  border-radius: 29px;
+  background: #dedede;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.help-item:first-child p {
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .help-page {
+    padding: 30px 24px 50px;
+  }
+
+  .help-header .vitral-logo {
+    --logo-size: 110px !important;
+  }
+
+  .help-back,
+  .help-login {
+    gap: 3px;
+    font-size: 20px;
+  }
+
+  .help-content {
+    gap: 38px;
+    margin-top: 55px;
+  }
+
+  .help-item {
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+  }
+
+  .help-item p {
+    padding: 16px 22px;
+    font-size: 17px;
+  }
+}
