@@ -1,0 +1,25 @@
+ALTER TABLE sebo
+ADD COLUMN IF NOT EXISTS cep VARCHAR(8);
+
+ALTER TABLE sebo
+ADD COLUMN IF NOT EXISTS logradouro VARCHAR(255);
+
+ALTER TABLE sebo
+ADD COLUMN IF NOT EXISTS cidade VARCHAR(120);
+
+ALTER TABLE sebo
+ADD COLUMN IF NOT EXISTS uf VARCHAR(2);
+
+ALTER TABLE sebo
+ADD COLUMN IF NOT EXISTS horario_funcionamento VARCHAR(255);
+
+ALTER TABLE sebo
+ADD COLUMN IF NOT EXISTS tipo_operacao VARCHAR(20) NOT NULL DEFAULT 'VIRTUAL';
+
+UPDATE sebo
+SET tipo_operacao = 'VIRTUAL'
+WHERE tipo_operacao IS NULL;
+
+CREATE INDEX IF NOT EXISTS ix_sebo_cidade ON sebo (cidade);
+CREATE INDEX IF NOT EXISTS ix_sebo_tipo_operacao ON sebo (tipo_operacao);
+CREATE INDEX IF NOT EXISTS ix_sebo_uf ON sebo (uf);

@@ -1,0 +1,11 @@
+CREATE TABLE token_recuperacao_senha (
+    id BIGSERIAL PRIMARY KEY,
+    account_id BIGINT NOT NULL REFERENCES account(id) ON DELETE CASCADE,
+    token VARCHAR(36) NOT NULL UNIQUE,
+    expira_em TIMESTAMP WITH TIME ZONE NOT NULL,
+    usado BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_token_recuperacao_senha_account ON token_recuperacao_senha(account_id);

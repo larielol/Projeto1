@@ -1,0 +1,2 @@
+ALTER TABLE account
+ADD COLUMN foto_url VARCHAR(500);
